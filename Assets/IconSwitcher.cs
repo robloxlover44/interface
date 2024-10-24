@@ -1,42 +1,21 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class IconSwitcher : MonoBehaviour
+public class ToggleFirstImage : MonoBehaviour
 {
-    [SerializeField] private List<SwitchableItem> switchableItems;
+    public Button myButton;
+    public GameObject[] images; 
 
-    private void Awake()
+    void Start()
     {
-       for (int i = 0; i < switchableItems.Count; i++)
-       {
-            int switchId = i;
-            switchableItems[i].switchButton.onClick.AddListener(() => SwitchIcon(switchId));
-       }
-
-
-
+        myButton.onClick.AddListener(ShowFirstImage);
     }
-    private void SwitchIcon(int switchID)
+
+    void ShowFirstImage()
     {
-        for (int i = 0; i < switchableItems.Count; i++)
+        for (int i = 0; i < images.Length; i++)
         {
-            
-           
-           switchableItems[i].icon.gameObject.SetActive(i == switchID);
-            
+            images[i].SetActive(i == 0); 
         }
     }
 }
-
-[Serializable]
-public class SwitchableItem
-{
-    [field:SerializeField] public Button switchButton { get; private set; }
-    [field:SerializeField] public GameObject icon {  get; private set; }
-}
-    

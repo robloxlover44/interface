@@ -342,6 +342,7 @@ GameObject:
   - component: {fileID: 416293236}
   - component: {fileID: 416293238}
   - component: {fileID: 416293237}
+  - component: {fileID: 416293239}
   m_Layer: 5
   m_Name: Bg
   m_TagString: Untagged
@@ -406,6 +407,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 416293235}
   m_CullTransparentMesh: 1
+--- !u!114 &416293239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416293235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b504170be956a040a99a8a76002bfb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myButton: {fileID: 573906367}
+  images:
+  - {fileID: 2018144752}
+  - {fileID: 78575163}
+  - {fileID: 464730575}
 --- !u!1 &464730575
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,9 +595,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 416293236}
-  - {fileID: 2018144755}
   - {fileID: 78575166}
   - {fileID: 464730578}
+  - {fileID: 2018144755}
   - {fileID: 677739014}
   - {fileID: 1894211949}
   - {fileID: 573906366}
@@ -602,9 +620,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b504170be956a040a99a8a76002bfb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switchableItems:
-  - <switchButton>k__BackingField: {fileID: 573906367}
-    <icon>k__BackingField: {fileID: 2018144752}
+  myButton: {fileID: 0}
+  images: []
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
